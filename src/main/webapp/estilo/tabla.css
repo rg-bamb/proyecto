@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('https://media.istockphoto.com/id/1204574586/es/foto/fondo-de-pared-abstracto-de-color-carmes%C3%AD-con-texturas-de-diferentes-tonos-de-carmes%C3%AD.jpg?s=612x612&w=0&k=20&c=WyNjKitlAxEswr1i1dd4mzw0jOZ9s3Xe_a1akUvZlCI=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* ✔️ Logo más chico y arriba a la izquierda */
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;     /* antes era 240px (aprox), ahora mitad */
+    height: auto;
+}
+
+/* ✔️ Caja negra centrada automáticamente */
+.contenedor {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    width: 90%;               /* se adapta mejor */
+    max-width: 360px;         /* límite para no deformar */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* centro horizontal */
+    justify-content: center;  /* centro vertical */
+}
+
+/* ✔️ Datos centrados aunque el texto sea largo */
+.contenedor .dato {
+    margin: 12px 0;
+    font-size: 1.2em;
+    word-wrap: break-word;     /* corta texto largo */
+    text-align: center;
+    width: 100%;
+}
+
+.boton {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    backdrop-filter: blur(2px);
+}
+
+.boton:hover {
+    background: rgba(255, 255, 255, 0.35);
+}

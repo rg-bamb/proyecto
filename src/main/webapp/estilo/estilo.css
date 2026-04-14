@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://media.istockphoto.com/id/1204574586/es/foto/fondo-de-pared-abstracto-de-color-carmes%C3%AD-con-texturas-de-diferentes-tonos-de-carmes%C3%AD.jpg?s=612x612&w=0&k=20&c=WyNjKitlAxEswr1i1dd4mzw0jOZ9s3Xe_a1akUvZlCI=');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 100px;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: auto;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1em; /* reducido a la mitad */
+  font-weight: bold;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  aspect-ratio: 3 / 1; /* rectángulo horizontal */
+  min-width: 200px;   /* ancho mínimo */
+  min-height: 100px;  /* alto mínimo */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.menu a:hover {
+  transform: scale(1.05);
+}
+.boton {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    backdrop-filter: blur(2px);
+}
+
+.boton:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Fondos específicos */
+.menu a.futbol {
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/020/723/325/small_2x/close-up-of-a-soccer-striker-ready-to-kicks-the-ball-in-the-football-goal-photo.jpg');
+}
+
+.menu a.basquet {
+  background-image: url('https://www.radioudec.cl/wp-content/uploads/2025/09/Emmanuel-Payton-Basquet-refuerzo-2-1024x683.jpg');
+}
+
+.menu a.volley {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQefjxcOgX0r0ZyJQdVEo85M4ZNpfdXdSQsJA&s');
+}
+
+.menu a.handball {
+  background-image: url('https://deportes.cba.gov.ar/wp-content/uploads/2025/09/cba-juega-alta-gracia-acd-6-1024x544.jpg');
+}
