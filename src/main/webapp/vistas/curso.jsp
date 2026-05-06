@@ -11,23 +11,15 @@
     <img src="${pageContext.request.contextPath}/estilo/logo colores.png" alt="Logo Carpetazo" class="logo">
   </a>
 
-  <div class="menu">
-    <a href="${pageContext.request.contextPath}/vistas/futbol.jsp" class="futbol">Fútbol</a>
-    <a href="${pageContext.request.contextPath}/vistas/basquet.jsp" class="basquet">Básquet</a>
-    <a href="${pageContext.request.contextPath}/vistas/handball.jsp" class="handball">Handball</a>
+  <div>
+    <a href="${pageContext.request.contextPath}/vistas/index.jsp">1°/2°</a>
+    <a href="${pageContext.request.contextPath}/vistas/index2.jsp" >3°/4°</a>
+    <a href="${pageContext.request.contextPath}/vistas/index3.jsp" >5°/6°</a>
+ 
   </div>
   
   <br>
   
-  <a href="${pageContext.request.contextPath}/Leer">
-  		Ver tabla
-  </a>
- 
-  <br>
- 
-    <a href="${pageContext.request.contextPath}/Leer">
-  		Ver lista
-  </a>
+  
 </body>
 </html>
-

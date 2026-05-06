@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('https://media.istockphoto.com/id/1204574586/es/foto/fondo-de-pared-abstracto-de-color-carmes%C3%AD-con-texturas-de-diferentes-tonos-de-carmes%C3%AD.jpg?s=612x612&w=0&k=20&c=WyNjKitlAxEswr1i1dd4mzw0jOZ9s3Xe_a1akUvZlCI=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(4px);
+}
+
+/* Título */
+.form-title {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+/* Grupo de inputs */
+.form-group {
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+/* Inputs */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Botones contenedor */
+.button-container {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botón principal */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(2px);
+    font-size: 1em;
+}
+
+/* Hover */
+.submit-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Link tipo botón */
+.link-button {
+    display: inline-block;
+}

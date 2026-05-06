@@ -14,8 +14,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 // Anotación que indica la ruta con la que se accede a este servlet
-@WebServlet("/Leer")
-public class LeerServlet extends HttpServlet {
+@WebServlet("/Leer3")
+public class LeerServlet3 extends HttpServlet {
 
     // Este método se ejecuta cuando se hace una petición POST al servlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,14 +35,16 @@ public class LeerServlet extends HttpServlet {
             declaracion = conexion.createStatement();
 
             // 3️⃣ Escribir la consulta SQL que queremos ejecutar
-            String sql = "SELECT id,nombre,apellido,curso,id_equipo from persona where curso like '1%' or curso like '2%'";
-            // 4️⃣ Ejecutar la consulta y guardar los datos obtenidos en el ResultSet
+            String sql = "SELECT p.id, p.nombre, p.apellido, p.curso, e.nombre AS equipo " +
+                    "FROM persona p " +
+                    "JOIN equipo e ON p.id_equipo = e.id " +
+                    "WHERE p.curso LIKE '5%' OR p.curso LIKE '6%'";            // 4️⃣ Ejecutar la consulta y guardar los datos obtenidos en el ResultSet
             resultados = declaracion.executeQuery(sql);
 
-            try (ResultSet conjuntoJugadores = declaracion.executeQuery(sql)) {
+            try (ResultSet conjuntoJugadores3 = declaracion.executeQuery(sql)) {
 
-                request.setAttribute("conjuntoJugadores", conjuntoJugadores);
-                request.getRequestDispatcher("vistas/tablajugadores.jsp").forward(request, response);
+                request.setAttribute("conjuntoJugadores3", conjuntoJugadores3);
+                request.getRequestDispatcher("vistas/tablajugadores3.jsp").forward(request, response);
             }
 
             /*

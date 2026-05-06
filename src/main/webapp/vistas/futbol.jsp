@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/estilo/opciones.css">
 </head>
 <body>
-  <a href="${pageContext.request.contextPath}/vistas/index.jsp">
-    <img src="${pageContext.request.contextPath}/estilo/Copilot_20251023_100707-removebg-preview.png" alt="Logo Carpetazo" class="logo">
+  <a href="${pageContext.request.contextPath}/vistas/curso.jsp">
+    <img src="${pageContext.request.contextPath}/estilo/logo colores.png" alt="Logo Carpetazo" class="logo">
   </a>
 
 

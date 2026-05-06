@@ -15,26 +15,26 @@ public class AltaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-    	// 1. Capturar parámetros del formulario (autor, comentario).
+    	// 1. Capturar parï¿½metros del formulario (autor, comentario).
         String equipo1 = request.getParameter("equipo1");
         String equipo2 = request.getParameter("equipo2");
         int  resultado1;
         int  resultado2;
         
-
+        
         //parseo
         try {
          resultado1 = Integer.parseInt(request.getParameter("resultado1"));
          resultado2 = Integer.parseInt(request.getParameter("resultado2"));
          
         } catch (NumberFormatException e) {
-            // Si no son números válidos, ir a la página de error
+            // Si no son nï¿½meros vï¿½lidos, ir a la pï¿½gina de error
             request.getRequestDispatcher("/vistas/error.jsp").forward(request, response);
             return;
         }
-     // 2. Validar que no estén vacíos.
+     // 2. Validar que no estï¿½n vacï¿½os.
         if (equipo1 == null || equipo1.isBlank() || equipo2 == null || equipo2.isBlank() || resultado1 < 0 || resultado2 < 0) {
-            // Si algún campo es inválido, ir a la página de error
+            // Si algï¿½n campo es invï¿½lido, ir a la pï¿½gina de error
             request.getRequestDispatcher("/vistas/error.jsp").forward(request, response);
             return;
         }
@@ -59,12 +59,12 @@ public class AltaServlet extends HttpServlet {
             declaracionPreparada.setString(4, equipo2);
 
             // Paso 5: ejecutar el INSERT.
-	    	// la variable entera "filas" será igual a 1 si se creó un dato, o 0 si no se creó nada.
+	    	// la variable entera "filas" serï¿½ igual a 1 si se creï¿½ un dato, o 0 si no se creï¿½ nada.
             int filas = declaracionPreparada.executeUpdate();
 
-            // Paso 6: verificar si se insertó correctamente
+            // Paso 6: verificar si se insertï¿½ correctamente
             if (filas > 0) {
-                request.setAttribute("mensajeExito", "¡Datos guardados correctamente!");
+                request.setAttribute("mensajeExito", "ï¿½Datos guardados correctamente!");
                 System.out.println("Datos guardados correctamente!");
                 request.getRequestDispatcher("/vistas/index.jsp").forward(request, response);
             } else {

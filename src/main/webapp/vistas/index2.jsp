@@ -15,19 +15,17 @@
     <a href="${pageContext.request.contextPath}/vistas/futbol.jsp" class="futbol">Fútbol</a>
     <a href="${pageContext.request.contextPath}/vistas/basquet.jsp" class="basquet">Básquet</a>
     <a href="${pageContext.request.contextPath}/vistas/handball.jsp" class="handball">Handball</a>
+    <a href="${pageContext.request.contextPath}/vistas/volley.jsp" class="volley">Vólley</a>
   </div>
   
   <br>
   
-  <a href="${pageContext.request.contextPath}/Leer">
+  <a href="${pageContext.request.contextPath}/Leer2">
   		Ver tabla
   </a>
- 
-  <br>
- 
-    <a href="${pageContext.request.contextPath}/Leer">
+  
+  <a href="${pageContext.request.contextPath}/Leer2">
   		Ver lista
   </a>
 </body>
 </html>
-

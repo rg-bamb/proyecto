@@ -12,7 +12,7 @@
 <body>
 
   <!-- Logo -->
-  <img src="${pageContext.request.contextPath}/estilo/Copilot_20251023_100707-removebg-preview.png" alt="Logo Carpetazo" class="logo">
+    <img src="${pageContext.request.contextPath}/estilo/logo colores.png" alt="Logo Carpetazo" class="logo">
 
   <!-- Mensaje de error -->
   <div class="error-container">

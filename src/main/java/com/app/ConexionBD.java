@@ -59,7 +59,7 @@ public static Connection obtenerConexion() throws SQLException {
 // Parámetros de conexión
 
 
-String url = "jdbc:mysql://localhost:3306/tabla";
+String url = "jdbc:mysql://localhost:3306/proyectocolores";
 
 String user = "root";
 

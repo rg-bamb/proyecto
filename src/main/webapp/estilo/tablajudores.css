@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* mejor que height fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('https://media.istockphoto.com/id/1204574586/es/foto/fondo-de-pared-abstracto-de-color-carmes%C3%AD-con-texturas-de-diferentes-tonos-de-carmes%C3%AD.jpg?s=612x612&w=0&k=20&c=WyNjKitlAxEswr1i1dd4mzw0jOZ9s3Xe_a1akUvZlCI=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+    height: auto;
+}
+
+/* Caja principal */
+.contenedor {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    max-height: 80vh;   /* 🔥 límite de altura */
+    overflow-y: auto;   /* 🔥 scroll interno */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* mejor para listas */
+}
+
+/* Cada resultado */
+.contenedor .dato {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.08); /* 🔥 separa visualmente */
+    border-radius: 10px;
+    text-align: left;  /* 🔥 más ordenado */
+    word-wrap: break-word;
+}
+
+/* Botón */
+.boton {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    backdrop-filter: blur(2px);
+}
+
+.boton:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
