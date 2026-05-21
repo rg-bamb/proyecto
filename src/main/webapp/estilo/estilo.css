@@ -43,9 +43,9 @@ body {
   background-position: center;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  aspect-ratio: 3 / 1; /* rectángulo horizontal */
-  min-width: 200px;   /* ancho mínimo */
-  min-height: 100px;  /* alto mínimo */
+  aspect-ratio: 3 / 1; /* rectï¿½ngulo horizontal */
+  min-width: 200px;   /* ancho mï¿½nimo */
+  min-height: 100px;  /* alto mï¿½nimo */
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
@@ -68,7 +68,7 @@ body {
     background: rgba(255, 255, 255, 0.35);
 }
 
-/* Fondos específicos */
+/* Fondos especï¿½ficos */
 .menu a.futbol {
   background-image: url('https://static.vecteezy.com/system/resources/thumbnails/020/723/325/small_2x/close-up-of-a-soccer-striker-ready-to-kicks-the-ball-in-the-football-goal-photo.jpg');
 }
