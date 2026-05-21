@@ -14,8 +14,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 //Anotación que define la URL del servlet
-@WebServlet("/eliminarJugador3")
-public class EliminarServlet3 extends HttpServlet {
+@WebServlet("/eliminarPartido3")
+public class EliminarPartido3 extends HttpServlet {
  // Método que se ejecuta cuando se recibe una solicitud POST
  @Override
  protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -30,7 +30,7 @@ public class EliminarServlet3 extends HttpServlet {
          // Conectar a la base de datos
          try (Connection conexion = ConexionBD.obtenerConexion()) {
              // SQL para eliminar un registro por ID
-             String sql = "DELETE FROM tabla WHERE id = ?";
+             String sql = "DELETE FROM partido WHERE id = ?";
              // Preparar la declaración SQL
              try (PreparedStatement statement = conexion.prepareStatement(sql)) {
                  // Recorrer todos los IDs seleccionados
@@ -54,7 +54,7 @@ public class EliminarServlet3 extends HttpServlet {
                  }
                  // Redirigir según si hubo eliminaciones exitosas o no
                  if (algunaEliminacionExitosa) {
-                     response.sendRedirect(request.getContextPath() + "/Leer3"); // Redirigir a la lista de datos
+                     response.sendRedirect(request.getContextPath() + "/LeerTabla3"); // Redirigir a la lista de datos
                  } else {
                      response.sendRedirect(request.getContextPath() + "/vistas/error.jsp"); // Redirigir a una página de error
                  }
@@ -69,7 +69,7 @@ public class EliminarServlet3 extends HttpServlet {
              // Conectar a la base de datos
              try (Connection conexion = ConexionBD.obtenerConexion()) {
                  // SQL para eliminar un registro por ID
-                 String sql = "DELETE FROM persona WHERE id = ?";
+                 String sql = "DELETE FROM partido WHERE id = ?";
                  // Preparar la declaración SQL
                  try (PreparedStatement statement = conexion.prepareStatement(sql)) {
                      // Convertir el ID único a un número entero
@@ -81,7 +81,7 @@ public class EliminarServlet3 extends HttpServlet {
                      // Verificar si la eliminación fue exitosa
                      if (filasAfectadas > 0) {
                          // Redirigir a la lista de datos después de eliminar
-                         response.sendRedirect(request.getContextPath() + "/Leer3");
+                         response.sendRedirect(request.getContextPath() + "/LeerTabla3");
                      } else {
                          response.sendRedirect(request.getContextPath() + "/vistas/error.jsp"); // Redirigir a una página de error
                      }

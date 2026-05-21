@@ -14,8 +14,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 //Anotación que define la URL del servlet
-@WebServlet("/eliminarJugador2")
-public class EliminarServlet2 extends HttpServlet {
+@WebServlet("/eliminarJugador")
+public class EliminarJugador extends HttpServlet {
  // Método que se ejecuta cuando se recibe una solicitud POST
  @Override
  protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -54,7 +54,7 @@ public class EliminarServlet2 extends HttpServlet {
                  }
                  // Redirigir según si hubo eliminaciones exitosas o no
                  if (algunaEliminacionExitosa) {
-                     response.sendRedirect(request.getContextPath() + "/Leer2"); // Redirigir a la lista de datos
+                     response.sendRedirect(request.getContextPath() + "/Leer"); // Redirigir a la lista de datos
                  } else {
                      response.sendRedirect(request.getContextPath() + "/vistas/error.jsp"); // Redirigir a una página de error
                  }
@@ -81,7 +81,7 @@ public class EliminarServlet2 extends HttpServlet {
                      // Verificar si la eliminación fue exitosa
                      if (filasAfectadas > 0) {
                          // Redirigir a la lista de datos después de eliminar
-                         response.sendRedirect(request.getContextPath() + "/Leer2");
+                         response.sendRedirect(request.getContextPath() + "/Leer");
                      } else {
                          response.sendRedirect(request.getContextPath() + "/vistas/error.jsp"); // Redirigir a una página de error
                      }

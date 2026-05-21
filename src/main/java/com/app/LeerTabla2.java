@@ -14,8 +14,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 // Anotación que indica la ruta con la que se accede a este servlet
-@WebServlet("/Leer3")
-public class LeerServlet3 extends HttpServlet {
+@WebServlet("/LeerTabla2")
+public class LeerTabla2 extends HttpServlet {
 
     // Este método se ejecuta cuando se hace una petición POST al servlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,14 +35,14 @@ public class LeerServlet3 extends HttpServlet {
             declaracion = conexion.createStatement();
 
             // 3️⃣ Escribir la consulta SQL que queremos ejecutar
-            String sql = "SELECT id,nombre,apellido,curso,id_equipo from persona where curso like '5%' or curso like '6%'";
-         // 4️⃣ Ejecutar la consulta y guardar los datos obtenidos en el ResultSet
-            resultados = declaracion.executeQuery(sql);
+            String sql = "SELECT * FROM partido where curso like '3%'";
+            // 4️⃣ Ejecutar la consulta y guardar los datos obtenidos en el ResultSet
+          
 
-            try (ResultSet conjuntoJugadores3 = declaracion.executeQuery(sql)) {
+            try (ResultSet conjuntoPartidos2 = declaracion.executeQuery(sql)) {
 
-                request.setAttribute("conjuntoJugadores3", conjuntoJugadores3);
-                request.getRequestDispatcher("vistas/tablajugadores3.jsp").forward(request, response);
+                request.setAttribute("conjuntoPartidos2", conjuntoPartidos2);
+                request.getRequestDispatcher("vistas/tablaPartidos2.jsp").forward(request, response);
             }
 
             /*
@@ -55,7 +55,7 @@ public class LeerServlet3 extends HttpServlet {
 
             request.setAttribute("error", e.getMessage());
             request.getRequestDispatcher("/vistas/error.jsp").forward(request, response);
-
+System.out.println("error en servlet");
         } finally {
 
             // 6️⃣ Cerramos los recursos para liberar memoria y evitar errores de conexión

@@ -20,7 +20,7 @@
   
   <br>
   
-  <a href="${pageContext.request.contextPath}/Leer3">
+  <a href="${pageContext.request.contextPath}/LeerTabla3">
   		Ver tabla
   </a>
  

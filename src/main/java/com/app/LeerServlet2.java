@@ -35,10 +35,7 @@ public class LeerServlet2 extends HttpServlet {
             declaracion = conexion.createStatement();
 
             // 3️⃣ Escribir la consulta SQL que queremos ejecutar
-            String sql = "SELECT p.id, p.nombre, p.apellido, p.curso, e.nombre AS equipo " +
-                    "FROM persona p " +
-                    "JOIN equipo e ON p.id_equipo = e.id " +
-                    "WHERE p.curso LIKE '3%' OR p.curso LIKE '4%'";
+            String sql = "SELECT id,nombre,apellido,curso,id_equipo from persona where curso like '3%' or curso like '4%'";
 
             // 4️⃣ Ejecutar la consulta y guardar los datos obtenidos en el ResultSet
             resultados = declaracion.executeQuery(sql);

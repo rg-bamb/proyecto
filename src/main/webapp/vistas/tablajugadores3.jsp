@@ -23,7 +23,7 @@
 <div class="contenedor">
 
     <div class="dato" style="font-size:1.4em; font-weight:bold; margin-bottom:20px;">
-        Resultados de Partidos
+        Lista de Jugadores
     </div>
 
 <%
@@ -70,16 +70,10 @@ int contador = 1;
         </button>
     </form>
        <!---------------------------------------------------------------------------------------------------------------->
-    <form action="${pageContext.request.contextPath}/vistas/editar.jsp" method="get"
-      style="display:inline-block; margin-left:10px;">
-
-    <input type="hidden" name="id" value="<%=id%>">
-
-    <button type="submit"
-            style="background-color:orange; color:white; border:none; padding:6px 12px; cursor:pointer;">
-        Editar
-    </button>
-</form>
+   <button type="button"
+			onclick="window.location.href='${pageContext.request.contextPath}/vistas/editarJugadores3.jsp?id=<%=id%>'"
+			style="background-color: orange; color: white; border: none; padding: 6px 12px; cursor: pointer;">
+			Editar</button>
 
 
  <%
@@ -93,8 +87,10 @@ int contador = 1;
 <%
     }
 %>
-
-    <a href="${pageContext.request.contextPath}/vistas/curso.jsp" class="boton">
+<a
+			href="${pageContext.request.contextPath}/vistas/añadirJugadores3.jsp"
+			class="boton"> Añadir jugador </a>
+    <a href="${pageContext.request.contextPath}/vistas/index3.jsp" class="boton">
         Volver al inicio
     </a>
 

@@ -1,8 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java"%>
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.ResultSet"%>
-<%@ page import="java.text.SimpleDateFormat"%>
-<%@ page import="java.sql.Timestamp"%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,8 +11,10 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
 	rel="stylesheet">
+
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/estilo/tablajudores.css">
+
 </head>
 <body>
 
@@ -27,46 +27,68 @@
 
 		<div class="dato"
 			style="font-size: 1.4em; font-weight: bold; margin-bottom: 20px;">
-			Lista de Jugadores</div>
+			Lista de Partidos</div>
 
 		<%
-		ResultSet conjuntoJugadores = (ResultSet) request.getAttribute("conjuntoJugadores");
+		ResultSet conjuntoPartidos = (ResultSet) request.getAttribute("conjuntoPartidos");
+
 		int contador = 1;
 
-		if (conjuntoJugadores != null && conjuntoJugadores.next()) {
+		if (conjuntoPartidos != null && conjuntoPartidos.next()) {
+
 			do {
-				String id = conjuntoJugadores.getString("id");
-				String nombre = conjuntoJugadores.getString("nombre");
-				String apellido = conjuntoJugadores.getString("apellido");
-				String curso = conjuntoJugadores.getString("curso");
-				int equipo = conjuntoJugadores.getInt("id_equipo");
+
+				int id = conjuntoPartidos.getInt("id");
+				int id_local = conjuntoPartidos.getInt("id_local");
+				int id_visitante = conjuntoPartidos.getInt("id_visitante");
+
+				int puntos_local = conjuntoPartidos.getInt("puntos_local");
+
+				int puntos_visitante = conjuntoPartidos.getInt("puntos_visitante");
+
+				int id_deporte = conjuntoPartidos.getInt("id_deporte");
+
+				String curso = conjuntoPartidos.getString("curso");
 		%>
 
 		<!-- CONTADOR -->
 		<div class="dato">
-			<%="Jugador " + contador%>
+			<%="Partido " + contador%>
 		</div>
 
 		<!-- DATOS -->
 		<div class="dato">
-			<strong>Nombre:</strong>
-			<%=nombre%>
-			<strong>Apellido:</strong>
-			<%=apellido%>
+
+			<strong>ID Partido:</strong>
+			<%=id%>
+
+			<strong>ID Local:</strong>
+			<%=id_local%>
+
+			<strong>ID Visitante:</strong>
+			<%=id_visitante%>
+
+			<strong>Puntos Local:</strong>
+			<%=puntos_local%>
+
+			<strong>Puntos Visitante:</strong>
+			<%=puntos_visitante%>
+
+			<strong>ID Deporte:</strong>
+			<%=id_deporte%>
+
 			<strong>Curso:</strong>
 			<%=curso%>
-			<strong>ID de Equipo:</strong>
-			<%=equipo%>
-		</div>
 
+		</div>
 		<!-- BOTÓN ELIMINAR -->
-		<form action="${pageContext.request.contextPath}/eliminarJugador"
+		<form action="${pageContext.request.contextPath}/eliminarPartido"
 			method="post" style="display: inline-block; margin-top: 10px;">
 
 			<input type="hidden" name="idUnico" value="<%=id%>">
 
 			<button type="submit"
-				onclick="return confirm('¿Seguro que quieres eliminar este jugador?');"
+				onclick="return confirm('¿Seguro que quieres eliminar este partido?');"
 				style="background-color: red; color: white; border: none; padding: 6px 12px; cursor: pointer;">
 				Eliminar</button>
 		</form>
@@ -75,35 +97,28 @@
 
 
 		<button type="button"
-			onclick="window.location.href='${pageContext.request.contextPath}/vistas/editarJugadores.jsp?id=<%=id%>'"
+			onclick="window.location.href='${pageContext.request.contextPath}/vistas/editarPartido.jsp?id=<%=id%>'"
 			style="background-color: orange; color: white; border: none; padding: 6px 12px; cursor: pointer;">
 			Editar</button>
 
 
-
-
-
 		<%
 		contador++;
-		} while (conjuntoJugadores.next());
+
+		} while (conjuntoPartidos.next());
+
 		} else {
 		%>
 
-		<div class="dato">No hay jugadores todavía.</div>
+		<div class="dato">No hay partidos todavía.</div>
 
 		<%
 		}
 		%>
-		<a href="${pageContext.request.contextPath}/vistas/añadirJugadores.jsp"
-			class="boton"> Añadir jugador </a>
-		<!-- BOTÓN EDITAR -->
-		<a href="${pageContext.request.contextPath}/vistas/index.jsp"
+
+
+		<a href="${pageContext.request.contextPath}/vistas/curso.jsp"
 			class="boton"> Volver al inicio </a>
-		<!-- BOTÓN EDITAR -->
-		
-
-
-
 
 	</div>
 
