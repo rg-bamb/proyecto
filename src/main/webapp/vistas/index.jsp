@@ -1,3 +1,10 @@
+
+<%
+String curso = request.getParameter("curso");
+%>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,23 +24,17 @@
 
 	<div class="menu">
 
-    <a class="futbol"
-       href="${pageContext.request.contextPath}/vistas/añadirFutbol.jsp?id_deporte=1">
-        Añadir Fútbol
-    </a>
+		<a class="futbol"
+			href="${pageContext.request.contextPath}/vistas/añadirFutbol.jsp?id_deporte=1&curso=<%= curso %>">
+			Fútbol </a>
+			 <a class="basquet"
+			href="${pageContext.request.contextPath}/vistas/añadirBasquet.jsp?id_deporte=3">
+			Básquet </a>
+			 <a class="handball"
+			href="${pageContext.request.contextPath}/vistas/añadirHandball.jsp?id_deporte=4">
+			Handball </a>
 
-    <a class="basquet"
-       href="${pageContext.request.contextPath}/vistas/añadirBasquet.jsp?id_deporte=3">
-        Añadir Básquet
-    </a>
-
-  
-    <a class="handball"
-       href="${pageContext.request.contextPath}/vistas/añadirHandball.jsp?id_deporte=4">
-        Añadir Handball
-    </a>
-
-</div>
+	</div>
 
 	<br>
 

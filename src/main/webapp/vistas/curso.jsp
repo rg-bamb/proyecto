@@ -12,9 +12,9 @@
   </a>
 
   <div>
-    <a href="${pageContext.request.contextPath}/vistas/index.jsp">1°/2°</a>
-    <a href="${pageContext.request.contextPath}/vistas/index2.jsp" >3°/4°</a>
-    <a href="${pageContext.request.contextPath}/vistas/index3.jsp" >5°/6°</a>
+    <a href="${pageContext.request.contextPath}/vistas/index.jsp?curso=1ro/2do">1°/2°</a>
+    <a href="${pageContext.request.contextPath}/vistas/index2.jsp?curso=3ro/4to" >3°/4°</a>
+    <a href="${pageContext.request.contextPath}/vistas/index3.jsp?curso=5to/6to" >5°/6°</a>
  
   </div>
   
